@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input:focus{
+  outline: 0;
+}
+
+.loading{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.loading span{
+  height: 30px;
+  width: 30px;
+  display: block;
+  background-color: rgb(0, 110, 255);
+  border-radius: 50%;
+  animation-name: animate;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.loading span:first-of-type{
+  animation-delay: .2s;
+}
+.loading span:nth-of-type(2){
+  animation-delay: .3s;
+}
+.loading span:last-of-type{
+  animation-delay: .4s;
+}
+
+@keyframes animate{
+  to{
+    transform: translateY(-20px);
+  }
+}
+
+.not-found{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: rgb(0, 110, 255);
+  font-weight: bold;
+}
